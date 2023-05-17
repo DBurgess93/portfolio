@@ -12,9 +12,9 @@ const Navbar = ({handles}) => {
       </nav>
       <nav>
         <ul>
-          <li><a href={handles[0].url} target="_blank" rel="noreferrer">{handles[0].name} </a></li>
-          <li><a href={handles[1].url} target="_blank" rel="noreferrer">{handles[1].name}</a></li>
-          <li><a href={handles[2].url} target="_blank" rel="noreferrer">{handles[2].name}</a></li>
+          {handles.map(handle => (
+            <li><a href={handle.url} target="_blank" rel="noreferrer">{handle.name} </a></li>
+          ))}
         </ul>
       </nav>
     </header>
