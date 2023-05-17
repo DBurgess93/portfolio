@@ -1,5 +1,5 @@
 
-const Navbar = ({handles}) => {
+const Navbar = ({ handles }) => {
   return (
     <header>
       <nav>
@@ -21,6 +21,16 @@ const Navbar = ({handles}) => {
   )
 }
 
+const Title = () => {
+  return (
+    <div>
+      <h1>Daniel Burgess</h1>
+      <h3>Full-Stack Web developer </h3>
+      <p>I like to build minimalistic, functional webpages with a focus on user experience.</p>
+    </div>
+  )
+}
+
 const App = () => {
   const handles = [
     {
@@ -39,6 +49,7 @@ const App = () => {
   return (
     <div>
       <Navbar handles={handles} />
+      <Title />
     </div>
   );
 }
