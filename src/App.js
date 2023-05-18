@@ -1,3 +1,6 @@
+import './App.scss'
+import deepworkLanding from './images/deepworkLanding.png'
+import defitLanding from './images/defitLanding.png'
 
 const Navbar = ({ handles }) => {
   return (
@@ -24,7 +27,7 @@ const Navbar = ({ handles }) => {
 const Title = () => {
   return (
     <div>
-      <h1>Daniel Burgess</h1>
+      <h1 className="title">Daniel Burgess</h1>
       <h3>Full-Stack Web developer </h3>
       <p>I like to build minimalistic, functional webpages with a focus on user experience.</p>
     </div>
@@ -49,6 +52,39 @@ const AboutMe = ({ leWagon, techStack }) => {
         </ul>
       </div>
     </div>
+  )
+}
+
+const ProjectSection = () => {
+  return (
+    <div>
+        <h2>Projects</h2>
+        <div>
+          <a href="https://deepwork-official.herokuapp.com/" target="-blank">
+            <div>
+              <img className="project-img" src={deepworkLanding} alt="Deepwork landing page"></img>
+              <div>
+                <h3>Deepwork.</h3>
+                <p> <strong>A web-app</strong> designed to help students track how they spend their study time, analize their data for a better understanding
+                  of their studying habits, and motivate them to reach a state of deep focus. </p>
+                <p> <strong>Design:</strong> Sticking to minimalistic principles and a look that suggests 'knowledge lives here', while adding some visually pleasing creativity
+                </p>
+              </div>
+            </div>
+          </a>
+          <a href="https://defit-official.herokuapp.com/" target="-blank">
+            <div>
+              <img className="project-img" src={defitLanding} alt="Defit landing page"></img>
+              <div>
+                <h3>De-fit.</h3>
+                <p><strong>A web-app</strong> built to help bring together those who are in need of a fitness space and those who have one to share.</p>
+                <p><strong>Design:</strong> Going for a darker theme, utilizing neon like colors to pierce through and give a fitness-feel to the app.
+                  another minimalistic styled site to keep things simple for the users.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
   )
 }
 
@@ -88,6 +124,7 @@ const App = () => {
       <Navbar handles={handles} />
       <Title />
       <AboutMe leWagon={leWagon} techStack={techStack} />
+      <ProjectSection />
     </div>
   );
 }
