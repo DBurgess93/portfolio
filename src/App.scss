@@ -1,8 +1,398 @@
-.project-img {
-  width: 300px;
-  height: auto;
+
+// Define variables for your color scheme
+
+// For example:
+$red: #FD1015;
+// $blue: #0D6EFD;
+$yellow: #FFC65A;
+$orange: #E67E22;
+$green: #1EDD88;
+$gray: #0E0000;
+$light-gray: #F4F4F4;
+
+
+// $white: #E8E8E8;
+$pink: #f49aa3;
+// $pinkhover: #d64f5c;
+$blue: #4b8ec3;
+// // $orange: #F7934C;
+
+// $primary: #F7934C;
+// $text: #5F6A6D;
+
+$white: #d9d4d4;
+$black: #1F1F1F;
+$primary: #FD9E72;
+$secondary: #4b8ec3;
+
+
+
+h2 {
+  margin-bottom: 30px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+  color: $primary;
 }
 
-.title {
-  color: pink;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid $primary;
+  padding: 30px 5%;
+  background-color: $black;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  transition: top 0.3s;
+  li,
+  a {
+    font-family: "Satoshi", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: $primary;
+    text-decoration: none;
+  }
+}
+
+.nav-links {
+  list-style: none;
+  padding-left: 12px;
+  li {
+    display: inline-block;
+    padding: 0px 20px;
+  }
+  li:nth-child(1) {
+    padding: 0 20px 0 0;
+  }
+  li a {
+    transition: all 0.3s ease 0s;
+  }
+  li a:hover {
+    color: $secondary;
+  }
+}
+
+.background {
+  background-color: $black;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  // display: grid;
+}
+
+// #intro {
+//   display: flex;
+//   justify-content: space-between;
+//   height: 100vh;
+// }
+
+#title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 50px;
+  height: 100vh;
+  h1 {
+    font-size: 60px;
+    color: $white;
+    font-weight: 500;
+    font-family: "Satoshi", sans-serif;
+  }
+  h3 {
+    font-size: 60px;
+    color: $white;
+    font-family: "Satoshi", sans-serif;
+    font-weight: 100;
+  }
+  p {
+    font-size: 35px;
+    color: $blue;
+    font-family: "Satoshi", sans-serif;
+    letter-spacing: 6px;
+    font-weight: 100;
+  }
+}
+
+.images {
+  max-width: 200px;
+}
+
+#about {
+  color: $white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 100;
+  p {
+    font-size: 25px;
+    a {
+      font-size: 25px;
+      color: $blue;
+    }
+    a:hover {
+      color: $pink;
+    }
+  }
+  span {
+    text-decoration: line-through;
+  }
+  h6 {
+    text-align: left;
+    color: $blue;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.background-blue {
+  background-color: $blue;
+  opacity: 0.1;
+}
+
+#projects {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  a {
+    text-decoration: none;
+  }
+}
+
+.project-card {
+  overflow: hidden;
+  padding: 16px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  box-shadow: 0px 1px 5px $gray;
+  border-radius: 5px;
+  text-decoration: none;
+  color: $white;
+  font-size: 12px;
+  transition: 0.3s;
+  background-color: rgba(75, 142, 195, 0.5);
+  width: 100%;
+  height: 200px;
+  margin-bottom: 10px;
+  &:hover {
+    background-color: rgba(75, 142, 195, 0.8);
+    cursor: pointer;
+  }
+  img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+  p {
+    font-size: 12px;
+    line-height: 1.4;
+    // opacity: .7;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+  strong {
+    color: $pink;
+  }
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  p {
+    text-decoration: none;
+  }
+}
+
+.tech-stack {
+  width: 100%;
+  margin-top: 35px;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0px;
+  }
+  li {
+    // display: flex;
+    border: 1px solid $blue;
+    border-radius: 12px;
+    padding: 4px 8px;
+  }
+}
+
+#contact {
+  color: $white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 100;
+  p {
+    font-size: 25px;
+    margin-bottom: 30px;
+    text-align: center;
+    a {
+      font-size: 25px;
+      color: $pink;
+    }
+    a:hover {
+      color: $blue;
+    }
+  }
+  h6 {
+    text-align: left;
+    color: $blue;
+  }
+}
+
+.logo-lg {
+  font-size: 30px;
+}
+
+.primary-button {
+  color: $blue;
+  border: 1px solid $blue;
+  padding: 8px 24px;
+  border-radius: 4px;
+  transition: 0.3s ease;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  &:hover {
+    transform: scale(1.2);
+    color: $pink;
+    border: 1px solid $pink;
+  }
+}
+
+.secondary-button {
+  color: $primary;
+  border: 1px solid $primary;
+  padding: 8px 24px;
+  border-radius: 4px;
+  transition: 0.3s ease;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  position: fixed;
+  right: 2em;
+  bottom: 2em;
+  &:hover {
+    transform: scale(1.2);
+    color: $primary;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $primary;
+  font-size: 12px;
+  position: relative;
+  bottom: 2em;
+  margin-top: 70px;
+}
+
+@media (max-width: 920px) {
+  .headings {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    li:nth-child(1) {
+      padding: 0 0 0 20px;
+    }
+  }
+
+  header {
+    justify-content: center;
+    position: relative;
+    padding: 6px 5%;
+    margin-bottom: 50px;
+  }
+
+  .tech-stack ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+  }
+
+  .title {
+    // margin-bottom: 100px;
+    height: auto;
+  }
+
+  #about {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    height: auto;
+  }
+
+  #projects {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    height: auto;
+  }
+
+  .project-card {
+    width: 330px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    img {
+      height: 50%;
+      width: auto;
+      object-fit: cover;
+    }
+  }
+
+  #contact {
+    height: 100vh;
+    margin-top: 80px;
+    margin-bottom: 200px;
+    height: auto;
+  }
+
+  .footer {
+    padding-bottom: 50px;
+  }
+
+  .cards a {
+    margin-bottom: 5px;
+  }
+
+  .secondary-button {
+    display: none;
+  }
 }
