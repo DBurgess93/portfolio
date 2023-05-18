@@ -24,7 +24,7 @@ const Navbar = ({ handles }) => {
   )
 }
 
-const Title = () => {
+const TitleSection = () => {
   return (
     <div>
       <h1 className="title">Daniel Burgess</h1>
@@ -58,33 +58,54 @@ const AboutMe = ({ leWagon, techStack }) => {
 const ProjectSection = () => {
   return (
     <div>
-        <h2>Projects</h2>
-        <div>
-          <a href="https://deepwork-official.herokuapp.com/" target="-blank">
+      <h2>Projects</h2>
+      <div>
+        <a href="https://deepwork-official.herokuapp.com/" target="-blank">
+          <div>
+            <img className="project-img" src={deepworkLanding} alt="Deepwork landing page"></img>
             <div>
-              <img className="project-img" src={deepworkLanding} alt="Deepwork landing page"></img>
-              <div>
-                <h3>Deepwork.</h3>
-                <p> <strong>A web-app</strong> designed to help students track how they spend their study time, analize their data for a better understanding
-                  of their studying habits, and motivate them to reach a state of deep focus. </p>
-                <p> <strong>Design:</strong> Sticking to minimalistic principles and a look that suggests 'knowledge lives here', while adding some visually pleasing creativity
-                </p>
-              </div>
+              <h3>Deepwork.</h3>
+              <p> <strong>A web-app</strong> designed to help students track how they spend their study time, analize their data for a better understanding
+                of their studying habits, and motivate them to reach a state of deep focus. </p>
+              <p> <strong>Design:</strong> Sticking to minimalistic principles and a look that suggests 'knowledge lives here', while adding some visually pleasing creativity
+              </p>
             </div>
-          </a>
-          <a href="https://defit-official.herokuapp.com/" target="-blank">
+          </div>
+        </a>
+        <a href="https://defit-official.herokuapp.com/" target="-blank">
+          <div>
+            <img className="project-img" src={defitLanding} alt="Defit landing page"></img>
             <div>
-              <img className="project-img" src={defitLanding} alt="Defit landing page"></img>
-              <div>
-                <h3>De-fit.</h3>
-                <p><strong>A web-app</strong> built to help bring together those who are in need of a fitness space and those who have one to share.</p>
-                <p><strong>Design:</strong> Going for a darker theme, utilizing neon like colors to pierce through and give a fitness-feel to the app.
-                  another minimalistic styled site to keep things simple for the users.</p>
-              </div>
+              <h3>De-fit.</h3>
+              <p><strong>A web-app</strong> built to help bring together those who are in need of a fitness space and those who have one to share.</p>
+              <p><strong>Design:</strong> Going for a darker theme, utilizing neon like colors to pierce through and give a fitness-feel to the app.
+                another minimalistic styled site to keep things simple for the users.</p>
             </div>
-          </a>
-        </div>
+          </div>
+        </a>
       </div>
+    </div>
+  )
+}
+
+const ContactSection = () => {
+  return (
+    <div>
+      <h2>Contact</h2>
+      <p>Looking for new opportunities to flex and build upon my programming skills, so feel free to get in touch!</p>
+      <a href="mailto:dan-burgess@hotmail.com">Say Hello 👋</a>
+    </div>
+  )
+}
+
+const FooterSection = () => {
+  return (
+    <>
+      <a href="#title">Top</a>
+      <div>
+        <p>Designed and Built by Daniel Burgess</p>
+      </div>
+    </>
   )
 }
 
@@ -122,9 +143,11 @@ const App = () => {
   return (
     <div>
       <Navbar handles={handles} />
-      <Title />
+      <TitleSection />
       <AboutMe leWagon={leWagon} techStack={techStack} />
       <ProjectSection />
+      <ContactSection />
+      <FooterSection />
     </div>
   );
 }
