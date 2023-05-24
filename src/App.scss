@@ -91,7 +91,7 @@ header {
   align-items: center;
   flex-wrap: wrap;
   border-bottom: 1px solid $primary;
-  padding: 30px 5%;
+  padding: 15px 5%;
   background-color: $black;
   position: fixed;
   width: 90vw;
@@ -154,12 +154,14 @@ header {
     color: $white;
     font-weight: 500;
     font-family: "Satoshi", sans-serif;
+    margin: 2px;
   }
   h3 {
     font-size: 60px;
     color: $white;
     font-family: "Satoshi", sans-serif;
     font-weight: 100;
+    margin: 2px;
   }
   p {
     font-size: 35px;
@@ -167,6 +169,7 @@ header {
     font-family: "Satoshi", sans-serif;
     letter-spacing: 6px;
     font-weight: 100;
+    margin: 2px;
   }
 }
 
