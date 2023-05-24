@@ -16,7 +16,7 @@ const Navbar = ({ handles }) => {
       <nav>
         <ul className="nav-links">
           {handles.map(handle => (
-            <li key={handle.name}><a href={handle.url} target="_blank" rel="noreferrer">{handle.icon} </a></li>
+            <li key={handle.name}><a href={handle.url} target="_blank" rel="noreferrer" >{handle.icon} </a></li>
           ))}
         </ul>
       </nav>
@@ -114,17 +114,17 @@ const App = () => {
     {
       name: "Linkedin",
       url: "https://www.linkedin.com/in/daniel-burgess-668176186/",
-      icon: "👋"
+      icon: "📄"
     },
     {
       name: "GitHub",
       url: "https://github.com/DBurgess93",
-      icon: "👋"
+      icon: "💻"
     },
     {
       name: "Email",
       url: "mailto:dan-burgess@hotmail.com",
-      icon: "👋"
+      icon: "✉️"
     }
   ]
 

@@ -1,15 +1,13 @@
-
 // Define variables for your color scheme
 
 // For example:
-$red: #FD1015;
+$red: #fd1015;
 // $blue: #0D6EFD;
-$yellow: #FFC65A;
-$orange: #E67E22;
-$green: #1EDD88;
-$gray: #0E0000;
-$light-gray: #F4F4F4;
-
+$yellow: #ffc65a;
+$orange: #e67e22;
+$green: #1edd88;
+$gray: #0e0000;
+$light-gray: #f4f4f4;
 
 // $white: #E8E8E8;
 $pink: #f49aa3;
@@ -21,11 +19,13 @@ $blue: #4b8ec3;
 // $text: #5F6A6D;
 
 $white: #d9d4d4;
-$black: #1F1F1F;
-$primary: #FD9E72;
+$black: #1f1f1f;
+$primary: #fd9e72;
 $secondary: #4b8ec3;
 
-
+body {
+  margin: 0;
+}
 
 h2 {
   margin-bottom: 30px;
@@ -39,9 +39,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   border-bottom: 1px solid $primary;
-  padding: 30px 5%;
   background-color: $black;
   position: fixed;
   width: 100vw;
@@ -60,6 +58,7 @@ header {
 .nav-links {
   list-style: none;
   padding-left: 12px;
+  flex-wrap: nowrap;
   li {
     display: inline-block;
     padding: 0px 20px;
