@@ -1,6 +1,7 @@
 import './App.scss'
 import deepworkLanding from './images/deepworkLanding.png'
 import defitLanding from './images/defitLanding.png'
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'
 
 const Navbar = ({ handles }) => {
   return (
@@ -16,7 +17,7 @@ const Navbar = ({ handles }) => {
       <nav>
         <ul className="nav-links">
           {handles.map(handle => (
-            <li key={handle.name}><a href={handle.url} target="_blank" rel="noreferrer" >{handle.icon} </a></li>
+            <li key={handle.name}><a href={handle.url} target="_blank" rel="noreferrer" > {handle.icon} </a></li>
           ))}
         </ul>
       </nav>
@@ -114,17 +115,17 @@ const App = () => {
     {
       name: "Linkedin",
       url: "https://www.linkedin.com/in/daniel-burgess-668176186/",
-      icon: "📄"
+      icon: < FaLinkedin />
     },
     {
       name: "GitHub",
       url: "https://github.com/DBurgess93",
-      icon: "💻"
+      icon: <FaGithub />
     },
     {
       name: "Email",
       url: "mailto:dan-burgess@hotmail.com",
-      icon: "✉️"
+      icon: <FaEnvelope />
     }
   ]
 
