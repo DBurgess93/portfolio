@@ -28,7 +28,7 @@ const Navbar = ({ handles }) => {
 const TitleSection = () => {
   return (
     <div id="title">
-      <h1 className="title">Daniel Burgess</h1>
+      <h1>Daniel Burgess</h1>
       <h3>Full-Stack Web developer </h3>
       <p>I like to build minimalistic, functional webpages with a focus on user experience.</p>
     </div>
@@ -145,7 +145,7 @@ const App = () => {
   ]
 
   return (
-    <div>
+    <div className="background">
       <Navbar handles={handles} />
       <div className="container">
         <TitleSection />
